@@ -57,16 +57,16 @@ const MotionBlurShader = {
 };
 
 function createTree(x, z) {
-  const trunkGeometry = new THREE.CylinderGeometry(1, 1.5, 10, 8);
-  const trunkMaterial = new THREE.MeshPhongMaterial({ color: 0x4a2f1b });
-  const trunk = new THREE.Mesh(trunkGeometry, trunkMaterial);
+  const trunkGeometry = new tree.CylinderGeometry(1, 1.5, 10, 8);
+  const trunkMaterial = new tree.MeshPhongMaterial({ color: 0x4a2f1b });
+  const trunk = new tree.Mesh(trunkGeometry, trunkMaterial);
 
-  const leavesGeometry = new THREE.ConeGeometry(7.5, 15, 8);
-  const leavesMaterial = new THREE.MeshPhongMaterial({ color: 0x0f5f13 });
-  const leaves = new THREE.Mesh(leavesGeometry, leavesMaterial);
+  const leavesGeometry = new tree.ConeGeometry(7.5, 15, 8);
+  const leavesMaterial = new tree.MeshPhongMaterial({ color: 0x0f5f13 });
+  const leaves = new tree.Mesh(leavesGeometry, leavesMaterial);
   leaves.position.y = 12.5;
 
-  const tree = new THREE.Group();
+  const tree = new tree.Group();
   tree.add(trunk);
   tree.add(leaves);
   tree.position.set(x, -2, z);
