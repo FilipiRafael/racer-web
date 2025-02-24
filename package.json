@@ -1,32 +1,21 @@
 {
-  "name": "racer-web",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "racer-game",
+  "version": "1.0.0",
+  "description": "A 3D racing game using Three.js",
+  "main": "index.html",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "start": "http-server -o"
   },
-  "dependencies": {
-    "@types/three": "^0.173.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "three": "^0.173.0"
-  },
+  "packageManager": "yarn@1.22.19",
+  "keywords": [
+    "three.js",
+    "racing",
+    "game",
+    "3d"
+  ],
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.19.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.18",
-    "globals": "^15.14.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    "http-server": "^14.1.1"
+  }
 }
