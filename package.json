@@ -5,7 +5,6 @@
   "main": "index.html",
   "scripts": {
     "start": "http-server -o",
-    "predeploy": "echo 'Running predeploy script'",
     "deploy": "gh-pages -d ."
   },
   "keywords": [
