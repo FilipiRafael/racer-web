@@ -1,0 +1,26 @@
+{
+  "name": "racer-web",
+  "version": "1.0.0",
+  "description": "A 3D racing game using Three.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -o",
+    "predeploy": "echo 'Running predeploy script'",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "three.js",
+    "racing",
+    "game",
+    "3d",
+    "webgl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "yarn@1.22.19",
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "http-server": "^14.1.1"
+  },
+  "homepage": "https://filipirafael.github.io/racer-web/"
+}
