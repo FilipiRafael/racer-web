@@ -1,10 +1,7 @@
-const getBasePath = () => {
-  const ghPagesPattern = /github\.io\/([^\/]+)/;
-  const match = window.location.href.match(ghPagesPattern);
-  return match ? `/${match[1]}` : "";
-};
-
-const BASE_PATH = getBasePath();
+const isGitHubPages = window.location.hostname.includes("github.io");
+const ENV_PATH = isGitHubPages
+  ? "https://filipirafael.github.io/racer-web/assets"
+  : "./assets";
 
 let scene, camera, renderer, car, ground, composer, skyDome;
 const keyState = {};
@@ -81,7 +78,7 @@ function createSkyDome() {
   geometry.scale(-1, 1, 1);
   const textureLoader = new THREE.TextureLoader();
   const material = new THREE.MeshBasicMaterial({
-    map: textureLoader.load(`${BASE_PATH}/assets/envmap.jpg`, (texture) => {
+    map: textureLoader.load(`${ENV_PATH}/envmap.jpg`, (texture) => {
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.ClampToEdgeWrapping;
       texture.repeat.set(1, 1);
@@ -194,7 +191,7 @@ function init() {
 
   const loader = new THREE.GLTFLoader();
   loader.load(
-    `${BASE_PATH}/assets/car.glb`,
+    `${ENV_PATH}/car.glb`,
     (gltf) => {
       car = gltf.scene;
       car.scale.set(1, 1, 1);
