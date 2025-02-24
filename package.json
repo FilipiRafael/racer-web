@@ -18,7 +18,7 @@
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "devDependencies": {
-    "gh-pages": "^5.0.0",
+    "gh-pages": "^6.3.0",
     "http-server": "^14.1.1"
   },
   "homepage": "https://filipirafael.github.io/racer-web/"
