@@ -1,4 +1,4 @@
-# Race 3D: WebSocket-Connected Racing Game & Controller 🏎️
+# WebSocket-Connected Racing Game & Controller 🏎️
 
 A 3D racing game with a dedicated mobile controller app, connected via WebSockets for real-time play.
 
