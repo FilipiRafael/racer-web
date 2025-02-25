@@ -1,59 +1,49 @@
-# Racing Game
+# Race 3D: WebSocket-Connected Racing Game & Controller 🏎️
 
-A 3D racing game created with Three.js. Drive around a track in a 3D environment with realistic motion physics.
+A 3D racing game with a dedicated mobile controller app, connected via WebSockets for real-time play.
 
-## Setup & Running the Game
+https://github.com/user-attachments/assets/be750f72-3c32-43d8-b7d4-05d1c50889da
+
+## What's In The Box
+
+### Racing Game (Web)
+- Complete 3D racing experience built with Three.js and JavaScript
+- Racing track with environment elements, motion blur effects, and realistic physics
+- Modular codebase with clean separation of concerns
+- Real-time communication with the controller app
+
+### Mobile Controller App
+- React Native joystick app for iOS and Android
+- Haptic feedback for an immersive experience
+- Multi-directional controls with custom behavior for acceleration/braking
+- Real-time WebSocket communication with the game
+
+### WebSocket Server
+- Connects the game and mobile controller
+- Handles real-time communication between devices
+- Lightweight and easy to deploy
+
+## Getting Started
 
 ### Prerequisites
-
-- [Node.js](https://nodejs.org/)
-- [Yarn](https://yarnpkg.com/) (preferred package manager)
-
-### Installation
-
-1. Clone or download this repository
-2. Navigate to the project directory in your terminal
-3. Install dependencies:
-
-```bash
-yarn install
-```
+- Node.js 16+
+- Yarn (preferred) or npm
+- Expo CLI (for mobile app)
 
 ### Running the Game
-
-Start the development server:
-
 ```bash
+# In the game directory
+yarn install
 yarn start
 ```
 
-This will automatically open the game in your default web browser. If it doesn't open automatically, visit [http://localhost:8080](http://localhost:8080).
-
-## Game Controls
-
-- **W**: Accelerate
-- **S**: Brake/Reverse
-- **A**: Turn left
-- **D**: Turn right
-
 ## Project Structure
+### The project is organized into three main components:
 
-```
-/
-├── index.html         # Main HTML file
-├── RacingGameEngine.js # Game logic and Three.js implementation
-├── styles.css         # Basic styling
-└── assets/           # Game assets
-    ├── car.glb       # 3D car model
-    └── envmap.jpg    # Environment map for sky
-```
+- `/racer-web`: The game and WebSocket server
+- `/racer-app`: The mobile controller application
 
-## Technology
+### Links
 
-- Three.js
-- WebGL
-- JavaScript
-
-## License
-
-MIT
+- **Game & Server:** https://github.com/FilipiRafael/racer-web
+- **Mobile Controller:** https://github.com/FilipiRafael/racer-app
