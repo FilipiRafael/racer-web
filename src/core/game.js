@@ -1,7 +1,6 @@
 import { setupRenderer, render, getComposer } from "./renderer.js";
 import { initInputHandlers, keyState } from "./input.js";
 import { createSkyDome, updateSkyDome } from "../entities/skyDome.js";
-import { loadCarModel, updateCarMovement, carParams } from "../entities/car.js";
 
 import {
   createGround,
@@ -9,8 +8,11 @@ import {
   populateForest,
 } from "../entities/terrain.js";
 
+import { loadCarModel, updateCarMovement, carParams } from "../entities/car.js";
+import { initNetworking, getConnectionStatus } from "./networking.js";
 
 let scene;
+let connectionStatus = false;
 
 export async function initGame() {
   scene = new THREE.Scene();
@@ -26,6 +28,11 @@ export async function initGame() {
 
   await loadCarModel(scene);
 
+  initNetworking((status) => {
+    connectionStatus = status;
+    showConnectionStatus(status);
+  });
+
   animate();
 
   return {
@@ -40,4 +47,10 @@ function animate() {
   updateSkyDome(keyState, carParams.speed);
 
   render();
+}
+
+function showConnectionStatus(status) {
+  console.log(
+    `App connection status: ${status ? "Connected" : "Disconnected"}`
+  );
 }
